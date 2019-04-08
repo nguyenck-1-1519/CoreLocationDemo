@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2121" y="-708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ubb-xh-jMJ">
@@ -51,12 +51,90 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4FO-wp-tnz"/>
+                        <segue destination="D0q-wF-Y5j" kind="relationship" relationship="rootViewController" id="0CQ-D3-7c0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iel-2i-vPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="k9U-AY-Me9">
+            <objects>
+                <viewController id="D0q-wF-Y5j" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WVv-0u-Msw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="dQ5-g4-4x5">
+                                <rect key="frame" x="94" y="305.5" width="187.5" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LH1-F4-o2V">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.01176470588" alpha="1" colorSpace="deviceRGB"/>
+                                        <state key="normal" title="map kit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="mWq-sy-YaN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6d-at-Awb">
+                                        <rect key="frame" x="0.0" y="90" width="187.5" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="google map">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Ve6-0h-icb" kind="show" id="e7S-UF-b8B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dQ5-g4-4x5" firstAttribute="width" secondItem="WVv-0u-Msw" secondAttribute="width" multiplier="1/2" id="FZK-Ze-AdS"/>
+                            <constraint firstItem="dQ5-g4-4x5" firstAttribute="centerX" secondItem="Keh-sw-DTV" secondAttribute="centerX" id="R0J-ui-57x"/>
+                            <constraint firstItem="dQ5-g4-4x5" firstAttribute="centerY" secondItem="Keh-sw-DTV" secondAttribute="centerY" id="uVr-fX-msr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Keh-sw-DTV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="39s-cu-zsc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ga2-HG-1Sy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="-708"/>
+        </scene>
+        <!--Google Map View Controller-->
+        <scene sceneID="HoR-b5-Ua7">
+            <objects>
+                <viewController id="Ve6-0h-icb" customClass="GoogleMapViewController" customModule="CoreLocationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D2B-Q9-q6e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gj9-GQ-rRq" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gj9-GQ-rRq" firstAttribute="top" secondItem="p6A-XI-Knp" secondAttribute="top" id="g0N-rP-ZPl"/>
+                            <constraint firstItem="gj9-GQ-rRq" firstAttribute="leading" secondItem="p6A-XI-Knp" secondAttribute="leading" id="hlL-d4-oZg"/>
+                            <constraint firstItem="p6A-XI-Knp" firstAttribute="bottom" secondItem="gj9-GQ-rRq" secondAttribute="bottom" id="pWz-wp-d6z"/>
+                            <constraint firstItem="p6A-XI-Knp" firstAttribute="trailing" secondItem="gj9-GQ-rRq" secondAttribute="trailing" id="vWs-fO-Sfc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p6A-XI-Knp"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="gj9-GQ-rRq" id="vAy-7V-e4X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xit-sY-dCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2121" y="56"/>
         </scene>
     </scenes>
 </document>
