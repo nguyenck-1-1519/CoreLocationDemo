@@ -15,14 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
 
     var locationManager = CLLocationManager()
+    var currentLocation: CLLocationCoordinate2D?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         map.showsUserLocation = true
         map.delegate = self
-//        startStandardLocationService()
+        startStandardLocationService()
 //        startVisitLocationService()
-        startSignificantUpdateLocationService()
+//        startSignificantUpdateLocationService()
     }
 
     deinit {
@@ -59,6 +60,24 @@ class ViewController: UIViewController {
         else {
             // No location was available.
             completionHandler(nil)
+        }
+    }
+
+    func monitorRegionAtLocation(center: CLLocationCoordinate2D, identifier: String ) {
+        // Make sure the app is authorized.
+        if CLLocationManager.authorizationStatus() == .authorizedAlways ||
+            CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            // Make sure region monitoring is supported.
+            if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
+                // Register the region.
+                let maxDistance: CLLocationDistance = 200
+                let region = CLCircularRegion(center: center,
+                                              radius: maxDistance, identifier: identifier)
+                region.notifyOnEntry = true
+                region.notifyOnExit = false
+
+                locationManager.startMonitoring(for: region)
+            }
         }
     }
 
@@ -100,6 +119,7 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         locationManager.pausesLocationUpdatesAutomatically = true
         locationManager.startMonitoringSignificantLocationChanges()
+        locationManager.startUpdatingHeading()
     }
 }
 
@@ -109,6 +129,7 @@ extension ViewController: CLLocationManagerDelegate {
             // chú ý là hệ thống có thể cache lại locations, nên cần check cả timestamp của location
             return
         }
+        monitorRegionAtLocation(center: location.coordinate, identifier: "identifier")
         print("lat: - \(location.coordinate.latitude) - long: - \(location.coordinate.longitude) - time: - \(location.timestamp)")
         map.setRegion(getRegion(location: location), animated: true)
     }
@@ -123,6 +144,18 @@ extension ViewController: CLLocationManagerDelegate {
             return
         }
         // error
+    }
+
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("Enter region")
+    }
+
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("Exit region")
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        print(newHeading)
     }
 }
 

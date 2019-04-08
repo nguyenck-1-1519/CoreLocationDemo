@@ -13,9 +13,15 @@
 		614F929D2255B97F002DCDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614F929C2255B97F002DCDBA /* Assets.xcassets */; };
 		614F92A02255B97F002DCDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 614F929E2255B97F002DCDBA /* LaunchScreen.storyboard */; };
 		614F92A822572DCE002DCDBA /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614F92A722572DCE002DCDBA /* CustomMarkerView.swift */; };
+		614F92AA225AE276002DCDBA /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614F92A9225AE276002DCDBA /* GoogleMapViewController.swift */; };
+		614F92AC225AF991002DCDBA /* CustomMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614F92AB225AF991002DCDBA /* CustomMarkerView.xib */; };
+		614F92AE225B41DB002DCDBA /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614F92AD225B41DB002DCDBA /* CustomInfoWindow.swift */; };
+		614F92B0225B41E7002DCDBA /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614F92AF225B41E7002DCDBA /* CustomInfoWindow.xib */; };
+		6E5A22A6A8D44CF78D51CE15 /* Pods_CoreLocationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0F158202E391599B0C8AED /* Pods_CoreLocationDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B0F158202E391599B0C8AED /* Pods_CoreLocationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreLocationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		614F92922255B97B002DCDBA /* CoreLocationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreLocationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		614F92952255B97B002DCDBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		614F92972255B97C002DCDBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +30,12 @@
 		614F929F2255B97F002DCDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		614F92A12255B97F002DCDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		614F92A722572DCE002DCDBA /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
+		614F92A9225AE276002DCDBA /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
+		614F92AB225AF991002DCDBA /* CustomMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMarkerView.xib; sourceTree = "<group>"; };
+		614F92AD225B41DB002DCDBA /* CustomInfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
+		614F92AF225B41E7002DCDBA /* CustomInfoWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInfoWindow.xib; sourceTree = "<group>"; };
+		61D06ED2F298101D6F735624 /* Pods-CoreLocationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreLocationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreLocationDemo/Pods-CoreLocationDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BD70DA8E670B5EFE24E0FF7B /* Pods-CoreLocationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreLocationDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreLocationDemo/Pods-CoreLocationDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5A22A6A8D44CF78D51CE15 /* Pods_CoreLocationDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				614F92942255B97B002DCDBA /* CoreLocationDemo */,
 				614F92932255B97B002DCDBA /* Products */,
+				904567E5A91D835229BDA424 /* Pods */,
+				A38EFECAC7D3AD91C44AFCE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +73,34 @@
 			children = (
 				614F92952255B97B002DCDBA /* AppDelegate.swift */,
 				614F92972255B97C002DCDBA /* ViewController.swift */,
+				614F92A9225AE276002DCDBA /* GoogleMapViewController.swift */,
+				614F92AD225B41DB002DCDBA /* CustomInfoWindow.swift */,
+				614F92A722572DCE002DCDBA /* CustomMarkerView.swift */,
+				614F92AF225B41E7002DCDBA /* CustomInfoWindow.xib */,
+				614F92AB225AF991002DCDBA /* CustomMarkerView.xib */,
 				614F92992255B97C002DCDBA /* Main.storyboard */,
 				614F929C2255B97F002DCDBA /* Assets.xcassets */,
 				614F929E2255B97F002DCDBA /* LaunchScreen.storyboard */,
 				614F92A12255B97F002DCDBA /* Info.plist */,
-				614F92A722572DCE002DCDBA /* CustomMarkerView.swift */,
 			);
 			path = CoreLocationDemo;
+			sourceTree = "<group>";
+		};
+		904567E5A91D835229BDA424 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61D06ED2F298101D6F735624 /* Pods-CoreLocationDemo.debug.xcconfig */,
+				BD70DA8E670B5EFE24E0FF7B /* Pods-CoreLocationDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A38EFECAC7D3AD91C44AFCE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B0F158202E391599B0C8AED /* Pods_CoreLocationDemo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 614F92A42255B97F002DCDBA /* Build configuration list for PBXNativeTarget "CoreLocationDemo" */;
 			buildPhases = (
+				8701D0E81E77AD5FBD7ABCD5 /* [CP] Check Pods Manifest.lock */,
 				614F928E2255B97B002DCDBA /* Sources */,
 				614F928F2255B97B002DCDBA /* Frameworks */,
 				614F92902255B97B002DCDBA /* Resources */,
+				E2BE294BF4F78D1560BE805B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,13 +163,64 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				614F92B0225B41E7002DCDBA /* CustomInfoWindow.xib in Resources */,
 				614F92A02255B97F002DCDBA /* LaunchScreen.storyboard in Resources */,
+				614F92AC225AF991002DCDBA /* CustomMarkerView.xib in Resources */,
 				614F929D2255B97F002DCDBA /* Assets.xcassets in Resources */,
 				614F929B2255B97C002DCDBA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8701D0E81E77AD5FBD7ABCD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoreLocationDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2BE294BF4F78D1560BE805B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CoreLocationDemo/Pods-CoreLocationDemo-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreLocationDemo/Pods-CoreLocationDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		614F928E2255B97B002DCDBA /* Sources */ = {
@@ -140,6 +229,8 @@
 			files = (
 				614F92982255B97C002DCDBA /* ViewController.swift in Sources */,
 				614F92962255B97B002DCDBA /* AppDelegate.swift in Sources */,
+				614F92AA225AE276002DCDBA /* GoogleMapViewController.swift in Sources */,
+				614F92AE225B41DB002DCDBA /* CustomInfoWindow.swift in Sources */,
 				614F92A822572DCE002DCDBA /* CustomMarkerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +375,7 @@
 		};
 		614F92A52255B97F002DCDBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61D06ED2F298101D6F735624 /* Pods-CoreLocationDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -293,7 +385,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = shin.CoreLocationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = shin.CoreLocationDemooo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,6 +394,7 @@
 		};
 		614F92A62255B97F002DCDBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD70DA8E670B5EFE24E0FF7B /* Pods-CoreLocationDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,7 +404,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = shin.CoreLocationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = shin.CoreLocationDemooo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

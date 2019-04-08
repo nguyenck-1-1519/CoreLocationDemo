@@ -8,8 +8,26 @@
 
 import MapKit
 
-class CustomMarkerView: NSObject, MKAnnotation {
-    @objc dynamic var coordinate = CLLocationCoordinate2D(latitude: 21.016675639999962, longitude: 105.78449393999996)
-    var title: String?
-    var subtitle: String?
+class CustomMarkerView: UIView {
+    
+    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    func commonInit() {
+        Bundle.main.loadNibNamed("CustomMarkerView", owner: self, options: nil)
+        self.addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleWidth]
+    }
 }
